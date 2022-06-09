@@ -10,7 +10,7 @@ while i < 3:  ## Definir o número de hosts do teste
   try: 
     ip = socket.gethostbyname(hosts[i].rstrip())
   except:
-    saida.writelines(hosts[i].rstrip("\n") + " " + "ERRO NO TESTE DE PING")
+    saida.writelines(hosts[i].rstrip("\n") + " " + "ERRO AO OBTER IP")
     saida.writelines("\n")
   finally:
     print(ip)
