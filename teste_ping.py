@@ -11,6 +11,7 @@ while i < 3:  ## Definir o número de hosts do teste
     ip = socket.gethostbyname(hosts[i].rstrip())
   except:
     saida.writelines(hosts[i].rstrip("\n") + " " + "ERRO AO OBTER IP")
+    i += 1
     saida.writelines("\n")
   finally:
     print(ip)
